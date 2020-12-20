@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="https://github.com/joeltroughton/uSMU/raw/main/Hardware/Version%205/uSMU_v05.png" width="650" title="μSMU">
+</p>
+
 # μSMU
 
 μSMU is a small [source-measure unit](https://en.wikipedia.org/wiki/Source_measure_unit) designed for the very low-cost electrical characterisation of photovoltaic cells.
