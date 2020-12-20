@@ -15,6 +15,8 @@ In photovoltaic research laboratories, a SMU is typically used to vary the volta
 
 SMUs are generalised pieces of test equipment, designed to be highly sensitive over vast current & voltage ranges. For example, the workhorse [Keithley 2400](https://uk.tek.com/keithley-source-measure-units/keithley-smu-2400-series-sourcemeter) has a voltage range between 100 nV and 200 V, and a current range between 1 pA to 10 A. This is likely overkill for most research and education applications concerning solar cells, which tend to operate between 0-5 V and μA to mA. The μSMU doesn't intend to replace precision SMUs, rather to supplement them in cost-sensitive areas where such precision is not required.
 
+The μSMU is a USB-powered SMU with a +/- 5 V voltage range and +/- 40 mA source/sink capability. The PCB is only 70mm x 43mm
+
 
 
 ## Function
