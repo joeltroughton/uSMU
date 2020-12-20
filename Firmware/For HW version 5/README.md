@@ -15,5 +15,5 @@ SMU commands
 | `CH1:DIS`             | Disable SMU output (high impedance)                          | None                              |
 | `CH1:CUR` *float*     | Set the sink/source current limit in mA                      | None                              |
 | `CH1:VOL` *float*     | Set the SMU to the requested voltage level in volts          | None                              |
-| `CH1:MEA:VOL` *float* | Set the SMU to the requested voltage level in volts and return the measured voltage and current | "voltage (float),current (float)" |
+| `CH1:MEA:VOL` *float* | Set the SMU to the requested voltage level in volts and return the measured voltage and current | "voltage (V),current (A)" |
 
