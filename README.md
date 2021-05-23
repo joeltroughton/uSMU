@@ -22,7 +22,7 @@ The μSMU is a USB-powered SMU with a +/- 5 V voltage range and +/- 50 mA source
 ## Function
 The μSMU is largely inspired by [Linear Technology's DC2591A evaluation board](https://www.analog.com/media/en/dsp-documentation/evaluation-kit-manuals/855-DC2591A_REV01_DEMO_MANUAL.PDF), which demonstrates an I2C address translator IC to interface up to 8 modules containing several I2C devices with an Arduino-style board. Somewhat consequentially, these boards also contain fantastic SMU circuits! 
 
-The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp driven by a 16-bit DAC on the non-inverting input and a 2.048V reference on the inverting input. The current flowing through the DUT is measured by amplifying the voltage drop through a high-side 50 Ohm shunt resistor. Both the DUT voltage and shunt resistor voltage drop are measured using a 16-bit ADC. The whole system is controlled using a STM32F072 microcontroller, which presents a USB virtual communications port for interfacing.
+The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp driven by a 16-bit DAC on the non-inverting input and a 2.048V reference on the inverting input. The current flowing through the DUT is measured by amplifying the voltage drop through a high-side 50 Ohm shunt resistor using a precision programmable gain amplifier. Both the DUT voltage and shunt resistor voltage drop are measured using a 16-bit ADC. The whole system is controlled using a STM32F072 microcontroller, which presents a USB virtual communications port for interfacing.
 
 
 
