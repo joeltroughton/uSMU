@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "uSMU_v10")(type "KiCad")(uri "${KIPRJMOD}/uSMU_v10.pretty")(options "")(descr ""))
+)
