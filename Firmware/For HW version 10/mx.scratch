@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScratchFile FileVersion="3.0">
+  <FileVersion>3.0</FileVersion>
+  <Workspace>
+    <WorkspaceType>Single-project</WorkspaceType>
+    <WorkspacePath>C:\Users\Joel\Documents\uSMU_v7_pga281\</WorkspacePath>
+    <underRoot>true</underRoot>
+    <TrustZone>0</TrustZone>
+    <HAL_Driver>C:\Users\Joel\STM32Cube\Repository\STM32Cube_FW_F0_V1.11.1\</HAL_Driver>
+    <CMSIS>Drivers/CMSIS</CMSIS>
+    <Toolchain>STM32CubeIDE</Toolchain>
+    <IocFile>uSMU_v7_pga281.ioc</IocFile>
+    <Project>
+      <ProjectName>uSMU_v7_pga281</ProjectName>
+      <ProjectNature>C</ProjectNature>
+      <Secure />
+      <filestoremove />
+      <sourceEntriesToRemove>
+        <sourceEntry />
+      </sourceEntriesToRemove>
+      <configs>
+        <config>
+          <name>uSMU_v7_pga281</name>
+          <mainSourceRepo>Core</mainSourceRepo>
+          <sourceStructure>Advanced</sourceStructure>
+          <device>STM32F072CBUx</device>
+          <cpucore>Arm Cortex-M0</cpucore>
+          <fpu>None</fpu>
+          <memories>
+            <memory access="xrw" name="RAM" size="16" start="0x20000000" />
+            <memory access="rx" name="FLASH" size="128" start="0x8000000" />
+          </memories>
+          <startup>C:\Users\Joel\STM32Cube\Repository\STM32Cube_FW_F0_V1.11.1\Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f072xb.s</startup>
+          <LinkSettings>
+            <icfloc>1</icfloc>
+            <LinkAdditionalLibs />
+          </LinkSettings>
+          <heapSize>0x200</heapSize>
+          <stackSize>0x400</stackSize>
+          <board>custom</board>
+          <debugprobe>swd</debugprobe>
+          <optimization />
+          <Aincludes>
+            <include />
+          </Aincludes>
+          <Adefines />
+          <Cdefines>
+            <define>USE_HAL_DRIVER</define>
+            <define>STM32F072xB</define>
+          </Cdefines>
+          <Ldefines />
+          <Cincludes>
+            <include>USB_DEVICE\App</include>
+            <include>USB_DEVICE\Target</include>
+            <include>Core\Inc</include>
+            <include>Drivers\STM32F0xx_HAL_Driver\Inc</include>
+            <include>Drivers\STM32F0xx_HAL_Driver\Inc\Legacy</include>
+            <include>Middlewares\ST\STM32_USB_Device_Library\Core\Inc</include>
+            <include>Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc</include>
+            <include>Drivers\CMSIS\Device\ST\STM32F0xx\Include</include>
+            <include>Drivers\CMSIS\Include</include>
+          </Cincludes>
+          <definestoremove>
+            <Adefines />
+            <Cdefines>
+              <define>USE_FULL_LL_DRIVER</define>
+              <define>MBEDTLS_CONFIG_FILE="mbedtls_config.h"</define>
+              <define>USE_FULL_ASSERT=1U</define>
+            </Cdefines>
+            <Ldefines />
+          </definestoremove>
+          <inctoremove>
+            <Aincludes>
+              <include />
+            </Aincludes>
+            <Cincludes />
+          </inctoremove>
+        </config>
+      </configs>
+      <copyAsReference>false</copyAsReference>
+      <sourceEntries>
+        <sourceEntry>
+          <name>Core</name>
+        </sourceEntry>
+        <sourceEntry>
+          <name>Drivers</name>
+        </sourceEntry>
+        <sourceEntry>
+          <name>Middlewares</name>
+        </sourceEntry>
+        <sourceEntry>
+          <name>USB_DEVICE</name>
+        </sourceEntry>
+      </sourceEntries>
+      <Groups />
+    </Project>
+  </Workspace>
+</ScratchFile>
+
