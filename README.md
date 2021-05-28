@@ -53,3 +53,14 @@ The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp
     - Extra headroom for power amplifier to push higher currents through 50 Ohm current shunt
 - 4.5V LDO added for DAC and ADC
 - USB-C port replaced with lower cost 2.0-pinned version
+
+## License
+
+#### Hardware
+CERN Open Hardware License Version 2 - Permissive ([CERN-OHL-P-2.0](https://ohwr.org/cern_ohl_p_v2.txt)).
+
+#### Software
+GNU General Public [Licence v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+#### Documentation:
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
