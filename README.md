@@ -36,6 +36,10 @@ The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp
 | Current limit              | -50 to +50 mA |
 | Current resolution         | ~10 nA     |
 
+## Errata
+### Version 10 (release 1.0)
+- The board layout is missing grounding on the MCU for some reason. Make sure to place a couple of vias in the MCU's exposed pad to ensure proper grounding. Sorry!
+
 ## Changelog
 ### Version 10 (release 1.0)
 - Voltage DAC changed from a 12-bit Microchip MCP4725 to a 16-bit TI DAC8571
