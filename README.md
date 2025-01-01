@@ -17,13 +17,10 @@ SMUs are generalised pieces of test equipment, designed to be highly sensitive o
 
 The μSMU is a USB-powered SMU with a +/- 5 V voltage range and +/- 50 mA source/sink capability. The PCB is only 70mm x 43mm
 
-
-
 ## Function
 The μSMU was originally inspired by [Linear Technology's DC2591A evaluation board](https://www.analog.com/media/en/dsp-documentation/evaluation-kit-manuals/855-DC2591A_REV01_DEMO_MANUAL.PDF), which demonstrates an I2C address translator IC to interface up to 8 modules containing several I2C devices with an Arduino-style board. Somewhat consequentially, these boards also contain fantastic SMU circuits!
 
 The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp driven by a 16-bit DAC on the non-inverting input and a 2.048V reference on the inverting input. The current flowing through the DUT is measured by amplifying the voltage drop through a high-side 50 Ohm shunt resistor using a precision programmable gain amplifier. Both the DUT voltage and shunt resistor voltage drop are measured using a 16-bit ADC. The whole system is controlled using a STM32F072 microcontroller, which presents a USB virtual communications port for interfacing.
-
 
 
 ## Capabilities 
@@ -35,6 +32,44 @@ The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp
 | Minimum voltage step size  | <1 mV        |
 | Current limit              | -50 to +50 mA |
 | Current resolution         | ~10 nA     |
+
+## Usage
+A simple [python package is available](https://github.com/Undalogic/usmu_py) to interface with the μSMU and perform basic measurements.
+
+You can install this package directly from PyPI:
+```bash
+pip install usmu_py
+```
+
+Here is a minimal script demonstrating how to initialise the SMU, set a voltage, measure it and the current, and then close the session.
+```python
+from usmu_py.smu import USMU
+
+def main():
+    # Open SMU on the specified port (e.g., 'COM3' or '/dev/ttyUSB0')
+    smu = USMU(port="COM3", baudrate=9600, command_delay=0.05)
+    try:
+        # Identify the SMU
+        idn = smu.read_idn()
+        print("IDN:", idn)
+
+        # Enable output and configure current limit
+        smu.enable_output()
+        smu.set_current_limit(20.0)  # 20 mA current limit
+
+        # Set voltage and measure
+        voltage, current = smu.set_voltage_and_measure(1.0)
+        print(f"Set voltage: 1.0 V | Measured Voltage: {voltage:.3f} V, Current: {current:.6f} A")
+
+        # Disable output after testing
+        smu.disable_output()
+    finally:
+        smu.close()
+
+if __name__ == "__main__":
+    main()
+```
+
 
 ## Errata
 ### Version 10 (release 1.0)
