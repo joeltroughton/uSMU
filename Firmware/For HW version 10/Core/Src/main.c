@@ -33,7 +33,7 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 #define ADS1115_ADDRESS 0x48 // I2C addresses of ADC and DAC
-#define DAC8571_ADDRESS 0x76
+#define DAC8571_ADDRESS 0x4C
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
