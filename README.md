@@ -7,6 +7,12 @@
 
 μSMU is a small [source-measure unit](https://en.wikipedia.org/wiki/Source_measure_unit) designed for the very low-cost electrical characterisation of photovoltaic cells.
 
+## Get a μSMU
+
+Want to buy a pre-assembled and calibrated μSMU with USB and test leads? [Grab one from Tindie](https://www.tindie.com/products/undalogic/smu/)
+
+<a href="https://www.tindie.com/stores/undalogic/?ref=offsite_badges&utm_source=sellers_undalogic&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
+
 ## Background
 
 SMUs are "4-quadrant" devices, meaning they can both source **and** sink current at both positive **and** negative voltages. This makes them very useful for semiconductor device characterisation - including LEDs, transistors and solar cells.
