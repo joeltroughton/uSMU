@@ -39,6 +39,15 @@ The voltage applied to the device-under-test (DUT) is supplied by a LT1970 opamp
 | Current limit              | -50 to +50 mA |
 | Current resolution         | ~10 nA     |
 
+## Free I-V Curve Tracer
+A free, browser-based I-V curve tracer for the μSMU is available from Undalogic
+
+[https://www.undalogic.com/usmu](https://www.undalogic.com/usmu)
+
+<p align="center">
+  <img src="https://github.com/joeltroughton/uSMU/blob/2af5fc53fadd81d5408aaaa4daaa668cc5c6f108/usmu_tracer.png" width="650" title="μSMU">
+</p>
+
 ## Usage
 A simple [python package is available](https://github.com/Undalogic/usmu_py) to interface with the μSMU and perform basic measurements.
 
