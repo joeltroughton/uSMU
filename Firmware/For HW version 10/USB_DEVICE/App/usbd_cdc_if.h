@@ -38,14 +38,13 @@
 /* Structure of FIFO*/
 
 typedef struct FIFO
-
 {
 uint32_t head;
 uint32_t tail;
     uint8_t data[FIFO_SIZE];
 } FIFO;
 
-FIFO RX_FIFO;
+extern FIFO RX_FIFO;
 /* USER CODE END INCLUDE */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
