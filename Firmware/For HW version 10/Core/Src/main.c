@@ -52,7 +52,7 @@ I2C_HandleTypeDef hi2c1;
 
 /* USER CODE BEGIN PV */
 uint8_t UserRxBuffer[128];
-bool usbMessageReceived = false;
+volatile bool usbMessageReceived = false;
 
 bool calibration_mode = false;
 bool auto_gain_active = true;

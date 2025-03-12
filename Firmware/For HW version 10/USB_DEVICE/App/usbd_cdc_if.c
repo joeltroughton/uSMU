@@ -52,7 +52,7 @@
 
 /* USER CODE BEGIN PRIVATE_TYPES */
 extern uint8_t UserRxBuffer[];
-extern bool usbMessageReceived;
+extern volatile bool usbMessageReceived;
 /* USER CODE END PRIVATE_TYPES */
 
 /**
@@ -262,10 +262,20 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
 static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
   /* USER CODE BEGIN 6 */
-	USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
-	USBD_CDC_ReceivePacket(&hUsbDeviceFS);
-	strcpy(UserRxBuffer, Buf);
-	usbMessageReceived = true;
+	if (Buf != NULL && *Len > 0) {
+		// First prepare to receive next packet
+		USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
+		USBD_CDC_ReceivePacket(&hUsbDeviceFS);
+
+		// Use safer string copy with size limit to prevent buffer overflow
+		// Since we're working with an external array, we can't use sizeof
+		// Assume UserRxBuffer is at least 128 bytes (as declared in main.c)
+		memset(UserRxBuffer, 0, 128);
+		strncpy((char*)UserRxBuffer, (char*)Buf, *Len > 127 ? 127 : *Len);
+
+		// Set the flag - forcefully ensure it's set for reliability
+		usbMessageReceived = true;
+	}
 	return (USBD_OK);
   /* USER CODE END 6 */
 }
