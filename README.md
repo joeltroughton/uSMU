@@ -9,7 +9,7 @@
 
 ## Get a μSMU
 
-Want to buy a pre-assembled and calibrated μSMU with USB and test leads? [Grab one from Tindie](https://www.tindie.com/products/undalogic/smu/)
+Want to buy a pre-assembled and calibrated μSMU with USB and test leads? Grab one from [Tindie](https://www.tindie.com/products/undalogic/smu/) or [Undalogic](https://www.undalogic.com/usmu).
 
 <a href="https://www.tindie.com/stores/undalogic/?ref=offsite_badges&utm_source=sellers_undalogic&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
 
